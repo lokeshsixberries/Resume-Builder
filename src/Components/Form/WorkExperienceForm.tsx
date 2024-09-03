@@ -6,7 +6,7 @@ import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-const WorkExperienceForm = () => {
+const WorkExperienceForm: React.FC = () => {
     const { workExperienceData, setWorkExperienceData } = useResumeContext();
 
     const [experience, setExperience] = useState({
@@ -29,19 +29,29 @@ const WorkExperienceForm = () => {
 
     const addOrUpdateWorkExperience = () => {
         if (experience.companyName && experience.startDate && experience.position) {
+            const updatedExperience = {
+                ...experience,
+                startDate: new Date(experience.startDate),
+                endDate: new Date(experience.endDate),
+            };
+
             if (editIndex !== null) {
+                // Update existing work experience
                 setWorkExperienceData(prevData => {
                     const updatedData = [...prevData];
-                    updatedData[editIndex] = { ...experience };
+                    updatedData[editIndex] = updatedExperience;
                     return updatedData;
                 });
                 setEditIndex(null);
             } else {
+                // Add new work experience
                 setWorkExperienceData(prevData => [
                     ...prevData,
-                    { ...experience },
+                    updatedExperience,
                 ]);
             }
+
+            // Reset form
             setExperience({
                 companyName: "",
                 position: "",
@@ -57,21 +67,17 @@ const WorkExperienceForm = () => {
         setExperience({
             companyName: item.companyName,
             position: item.position,
-            startDate: item.startDate || "",
-            endDate: item.endDate || "",
+            startDate: item.startDate ? new Date(item.startDate).toISOString().substring(0, 10) : "",
+            endDate: item.endDate ? new Date(item.endDate).toISOString().substring(0, 10) : "",
             workInfo: item.workInfo,
         });
         setEditIndex(index);
     };
 
-    const handleDeleteExperience = (postion: number) => {
-        const filteredData = (workExperienceData || []).filter((item, index) => {
-            if (postion !== index) {
-                return item;
-            }
-        });
-        setWorkExperienceData(filteredData)
-    }
+    const handleDeleteExperience = (index: number) => {
+        const filteredData = workExperienceData.filter((_, i) => i !== index);
+        setWorkExperienceData(filteredData);
+    };
 
     return (
         <>
@@ -149,18 +155,19 @@ const WorkExperienceForm = () => {
 
             <div>
                 {workExperienceData.map((item, index) => (
-                    <Card
-                        key={index}
-                        className="work-experience-company-list-card"
-                    >
+                    <Card key={index} className="work-experience-company-list-card">
                         <CardBody>
                             {item.companyName}
-                            <FontAwesomeIcon icon={faEdit}
+                            <FontAwesomeIcon
+                                icon={faEdit}
                                 onClick={() => handleEditClick(index)}
-                                className="resume-summary-list-edit-icon" />
-                            <FontAwesomeIcon icon={faTimes}
+                                className="resume-summary-list-edit-icon"
+                            />
+                            <FontAwesomeIcon
+                                icon={faTimes}
                                 onClick={() => handleDeleteExperience(index)}
-                                className="resume-summary-list-close-icon" />
+                                className="resume-summary-list-close-icon"
+                            />
                         </CardBody>
                     </Card>
                 ))}

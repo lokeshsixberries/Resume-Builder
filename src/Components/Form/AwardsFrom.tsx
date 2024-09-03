@@ -10,7 +10,7 @@ const AwardsForm: React.FC = () => {
     const [award, setAward] = useState('');
     const { awardsList, setAwardsList } = useResumeContext();
 
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
         setAward(event.target.value)
     }
     const addAwardToList = () => {

@@ -3,7 +3,7 @@ import "./styles.css";
 import { Col, Row } from 'reactstrap';
 import { useResumeContext } from '../Main';
 
-const formatDate = (dateString: string): string => {
+const formatDate = (dateString: Date): string => {
     const date = new Date(dateString);
     if (isNaN(date.getTime())) {
         return "Invalid Date";

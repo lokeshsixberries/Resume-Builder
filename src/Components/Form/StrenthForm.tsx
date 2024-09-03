@@ -10,7 +10,7 @@ const StrenthForm: React.FC = () => {
     const [strenth, setStrenth] = useState('');
     const { strenthList, setStrentList } = useResumeContext();
 
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
         setStrenth(event.target.value)
     }
     const addStrenthToList = () => {

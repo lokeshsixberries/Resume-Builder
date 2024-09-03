@@ -7,7 +7,7 @@ const PersonalInfo: React.FC = () => {
 
     const { personalInfoData, setPersonalInfoData } = useResumeContext();
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setPersonalInfoData({
             ...personalInfoData,

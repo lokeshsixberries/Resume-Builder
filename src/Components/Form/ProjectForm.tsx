@@ -28,7 +28,7 @@ const ProjectForm = () => {
         });
     };
 
-    const handleSkillChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleSkillChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setSkill(event.target.value);
     };
 

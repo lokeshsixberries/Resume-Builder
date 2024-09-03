@@ -10,7 +10,7 @@ const SkillForm: React.FC = () => {
     const [skill, setSkill] = useState('');
     const { skillList, setSkillList } = useResumeContext();
 
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
         setSkill(event.target.value)
     }
     const addSkillToList = () => {

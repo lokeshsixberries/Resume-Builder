@@ -6,7 +6,7 @@ export default function Education() {
 
     const { educationData } = useResumeContext();
 
-    const formatDate = (dateString: string): string => {
+    const formatDate = (dateString: Date): string => {
         const date = new Date(dateString);
         if (isNaN(date.getTime())) {
             return "Invalid Date";

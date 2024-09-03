@@ -34,7 +34,7 @@ export default function ProfileSummaryForm() {
         })
     }
 
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
         setSummary(event.target.value);
     }
 
