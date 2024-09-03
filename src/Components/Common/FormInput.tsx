@@ -7,7 +7,7 @@ interface FormInputProps {
     type: string;
     name: string;
     placeholder: string;
-    handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    handleInputChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
 const FormInput: React.FC<FormInputProps> = ({
