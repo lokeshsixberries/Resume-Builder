@@ -1,0 +1,18 @@
+.resume-form-input-box {
+  display: block;
+}
+
+.resume-form-input-label {
+  color: gray;
+}
+
+.resume-form-input {
+  height: 45px;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+  color: rgb(78, 78, 78);
+  margin-bottom: 15px;
+}

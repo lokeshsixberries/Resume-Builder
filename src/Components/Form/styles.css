@@ -1,0 +1,95 @@
+.form-nav {
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+}
+
+.form-nav-item {
+  height: 50px;
+  outline: none;
+  box-shadow: 0px;
+  border: none;
+  border: none !important;
+  background-color: white;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #eee;
+  cursor: pointer;
+  text-align: center;
+  border: none !important;
+  box-shadow: none;
+}
+
+.form-nav-item-active {
+  background-color: #000042 !important;
+  overflow: hidden !important;
+  height: 50px;
+  outline: none;
+  box-shadow: 0px;
+  border: none !important;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #000042;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.form-nav-link {
+  border: none !important;
+  box-shadow: 0px;
+  color: #000042 !important;
+}
+
+.form-nav-link-active:hover {
+  color: white !important;
+}
+
+.form-nav-link-active {
+  border: none !important;
+  box-shadow: 0px;
+  color: white;
+}
+
+.input-form-card {
+  border: 1px solid #eee;
+  border-bottom: none;
+}
+
+.input-form-tab-content {
+  margin-top: 5px;
+  border: 1px solid #eee;
+  box-shadow: 0px 0px 3px #eee;
+}
+
+/*  */
+
+.work-experience-company-list-card {
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  color: #000042;
+}
+
+.add-in-resume-btn {
+  height: 40px;
+  border: none;
+  padding: 0px 10px;
+  color: rgb(74, 74, 74);
+}
+
+.skill-add-btn {
+  position: absolute;
+  top: 25px;
+  border: none;
+  cursor: pointer;
+  height: 48px;
+  width: 50px;
+  right: 20px;
+  border-radius: 5px;
+  color: rgb(74, 74, 74);
+}
+
+.active-nav {
+  background-color: red;
+}
