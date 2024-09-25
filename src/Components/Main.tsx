@@ -198,7 +198,7 @@ const MainPage: React.FC = () => {
                 <Col xl="6">
                     <ResumeForm />
                 </Col>
-                <Col xl="6">
+                <Col xl="6" contentEditable style={{ outline: "none", border: "none" }}>
                     <Resume />
                 </Col>
             </Row>

@@ -10,7 +10,7 @@ export default function Awards() {
 
     return (
         <div>
-            <div className='heading'>AWARDS / RECOGNITION</div>
+            <div className='heading'>AWARDS / CERTIFICATES</div>
             {
                 (awardsList || []).map((item, index) => {
                     return (

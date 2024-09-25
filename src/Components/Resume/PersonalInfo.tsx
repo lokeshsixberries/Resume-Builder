@@ -17,6 +17,9 @@ const PersonalInfo: React.FC = () => {
                         <div className='d-flex'>
                             <div className='employee-profile text-left mx-1'>{personalInfoData.employeeRole}</div>
                             <div className='resume-links text-left'>
+                                {personalInfoData.employeeEmail && <Link className='resume-personal-profile-link' style={{
+                                    color: "black"
+                                }} href={personalInfoData.employeeEmail} target="_blank"><span className='resume-link-seprator'>|</span>{' '}+91 123231234{' '}</Link>}
                                 {personalInfoData.employeeEmail && <Link className='resume-personal-profile-link' href={personalInfoData.employeeEmail} target="_blank"><span className='resume-link-seprator'>|</span>{' '}{personalInfoData.employeeEmail}{' '}</Link>}
                                 {personalInfoData.employeeLinkedin && <Link className='resume-personal-profile-link' href={personalInfoData.employeeLinkedin} target="_blank"><span className='resume-link-seprator'>|</span>{' '}Linkedin{' '}</Link>}
                                 {personalInfoData.employeeGithub && <Link className='resume-personal-profile-link' href={personalInfoData.employeeGithub} target="_blank"><span className='resume-link-seprator'>|</span>{' '}Github{' '}</Link>}
