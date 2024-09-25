@@ -7,8 +7,8 @@ import Header from "../Components/Core/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My Resume Maker",
-  description: "REsume Maker",
+  title: "Resume Maker",
+  description: "The Resume Builder",
 };
 
 export default function RootLayout({
