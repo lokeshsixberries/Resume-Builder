@@ -22,10 +22,8 @@ const PersonalInfo: React.FC = () => {
                                 color: "gray"
                             }}>{personalInfoData.employeeRole}</div>
                             <div className='resume-links text-left d-flex'>
-                                {personalInfoData.employeeEmail && <Link className='resume-personal-profile-link' style={{
-                                    color: "gray",
-                                    fontWeight: "700"
-                                }} href={personalInfoData.employeeEmail} target="_blank"><span className='resume-link-seprator'>|</span>{' '}+91 123231234{' '}</Link>}
+
+                                <Link className='resume-personal-profile-link' href={personalInfoData.employeeEmail} target="_blank"><span className='resume-link-seprator mx-1'>|</span>{' '}+91 1234567890{' '}</Link>
                                 {personalInfoData.employeeEmail && <Link className='resume-personal-profile-link' href={personalInfoData.employeeEmail} target="_blank"><span className='resume-link-seprator mx-1'>|</span>{' '}{personalInfoData.employeeEmail}{' '}</Link>}
                                 {personalInfoData.employeeLinkedin && <Link className='resume-personal-profile-link' href={personalInfoData.employeeLinkedin} target="_blank"><span className='resume-link-seprator mx-1'>|</span>{' '}Linkedin{' '}</Link>}
                                 {personalInfoData.employeeGithub && <Link className='resume-personal-profile-link' href={personalInfoData.employeeGithub} target="_blank"><span className='resume-link-seprator mx-1'>|</span>{' '}Github{' '}</Link>}
